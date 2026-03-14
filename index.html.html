@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Guide Colon Irritable</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--g:#4a8c1c;--gl:#e8f5e0;--r:#c0392b;--rl:#fdeaea;--w:#b8860b;--wl:#fef9ec;--acc:#1a6b4a;--accl:#e6f4ee;--bg:#fff;--fg:#1a1a1a;--fg2:#555;--fg3:#999;--brd:#e4e4e0;--bg2:#f5f5f2}
+@media(prefers-color-scheme:dark){
+:root{--bg:#1a1a1a;--fg:#e8e8e4;--fg2:#aaa;--fg3:#777;--brd:#333;--bg2:#252525;--gl:#1a2e10;--rl:#2e1414;--wl:#2e2510;--accl:#102e20}
+body{background:var(--bg);color:var(--fg)}
+.nav,.sbar{background:var(--bg)}
+.nb{background:var(--bg2);color:var(--fg2);border-color:var(--brd)}
+.nb.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.cd-h{background:var(--bg2)}
+.cd{border-color:var(--brd)}
+.sinp,.ji,.scan-manual{background:var(--bg2);color:var(--fg);border-color:var(--brd)}
+.ja,.scan-go{background:var(--fg);color:var(--bg)}
+.je{background:var(--bg2);border-color:var(--brd)}
+.jf button{background:var(--bg2);color:var(--fg2);border-color:var(--brd)}
+.jf button.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.jexp{background:var(--bg2);border-color:var(--brd);color:var(--fg2)}
+.ph{border-color:var(--brd)}
+.scan-result{border-color:var(--brd)}
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--fg);background:var(--bg);max-width:720px;margin:0 auto;padding:0 8px 60px;-webkit-text-size-adjust:100%}
+.nav{display:flex;gap:4px;padding:10px 4px;overflow-x:auto;position:sticky;top:0;background:var(--bg);z-index:10;border-bottom:1px solid var(--brd);-webkit-overflow-scrolling:touch}
+.nav::-webkit-scrollbar{display:none}
+.nb{flex-shrink:0;padding:8px 16px;border-radius:20px;border:1px solid var(--brd);background:var(--bg2);color:var(--fg2);font-size:14px;cursor:pointer;font-family:inherit;white-space:nowrap;-webkit-tap-highlight-color:transparent;transition:all .15s}
+.nb.on{background:var(--fg);color:var(--bg);border-color:var(--fg);font-weight:600}
+.sbar{padding:8px 4px;position:sticky;top:52px;background:var(--bg);z-index:9;display:none}
+.sinp{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--brd);background:var(--bg2);font-size:15px;color:var(--fg);font-family:inherit;outline:none}
+.sinp:focus{border-color:var(--fg3)}
+.vw{display:none;padding:8px 4px}
+.vw.on{display:block}
+.cd{border:1px solid var(--brd);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.cd-h{font-size:15px;font-weight:600;padding:12px 14px;background:var(--bg2);display:flex;justify-content:space-between;align-items:center;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
+.cd-h .c{font-size:11px;color:var(--fg3);font-weight:400}
+.cd-b{padding:8px 10px 10px}
+.cd.shut .cd-b{display:none}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:500px){.fr{grid-template-columns:1fr}}
+.fc{padding:8px 10px;border-radius:8px;font-size:13px;line-height:1.55}
+.fc.g{background:var(--gl);border-left:3px solid var(--g)}
+.fc.r{background:var(--rl);border-left:3px solid var(--r)}
+.fc b{font-weight:600}
+.fc .s{color:var(--fg3);font-size:11px}
+.fw{font-size:12px;color:var(--w);background:var(--wl);padding:6px 10px;border-left:3px solid var(--w);border-radius:0 6px 6px 0;margin-top:8px}
+.si{padding:10px;border-radius:10px;margin-bottom:6px;font-size:13px;display:flex;align-items:flex-start;gap:10px}
+.si.sg{background:var(--gl);border-left:3px solid var(--g)}
+.si.sr{background:var(--rl);border-left:3px solid var(--r)}
+.bd{flex-shrink:0;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;color:#fff}
+.bd.bg{background:var(--g)}
+.bd.br{background:var(--r)}
+.sn{font-weight:600}
+.sc{font-size:11px;color:var(--fg3)}
+.sd{font-size:12px;color:var(--fg2);margin-top:2px}
+.nr{text-align:center;padding:30px;color:var(--fg3);font-size:14px}
+.ph{border:1px solid var(--brd);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.ph-h{padding:14px;display:flex;align-items:center;gap:12px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.ph-d{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:#fff;flex-shrink:0}
+.ph-t{font-size:15px;font-weight:600}
+.ph-s{font-size:12px;color:var(--fg3)}
+.ph-b{padding:0 14px 14px;font-size:13px;line-height:1.6;color:var(--fg2);display:none}
+.ph.op .ph-b{display:block}
+.pl{list-style:none;padding:0}
+.pl li{padding:4px 0 4px 16px;position:relative}
+.pl li::before{content:"";position:absolute;left:4px;top:12px;width:6px;height:6px;border-radius:50%;background:var(--g)}
+.pl li.av::before{background:var(--r)}
+.mc{border-radius:12px;padding:14px;margin-bottom:10px}
+.mc.mr{background:var(--rl);border:1px solid rgba(192,57,43,.15)}
+.mc.mg{background:var(--gl);border:1px solid rgba(74,140,28,.15)}
+.mc.mt{background:var(--accl);border:1px solid rgba(26,107,74,.15)}
+.mc h3{font-size:14px;font-weight:600;margin-bottom:8px}
+.mc.mr h3{color:var(--r)}
+.mc.mg h3{color:var(--g)}
+.mc.mt h3{color:var(--acc)}
+.mi{font-size:13px;line-height:1.65;padding:3px 0 3px 14px;position:relative}
+.mi::before{content:"";position:absolute;left:2px;top:10px;width:6px;height:6px;border-radius:50%}
+.mr .mi::before{background:var(--r)}
+.mg .mi::before{background:var(--g)}
+.mt .mi::before{background:var(--acc)}
+.jd{font-size:13px;color:var(--fg2);margin-bottom:10px;text-align:center}
+.jr{display:flex;gap:6px;margin-bottom:10px}
+.ji{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--brd);background:var(--bg2);font-size:14px;color:var(--fg);font-family:inherit;outline:none}
+.ja{padding:10px 16px;border-radius:10px;border:none;background:var(--fg);color:var(--bg);font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+.jf{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.jf button{padding:5px 12px;border-radius:16px;border:1px solid var(--brd);background:var(--bg2);font-size:12px;cursor:pointer;font-family:inherit;color:var(--fg2);-webkit-tap-highlight-color:transparent}
+.jf button.on{border-color:var(--fg);background:var(--fg);color:var(--bg)}
+.je{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;margin-bottom:4px;font-size:13px;background:var(--bg2);border:1px solid var(--brd)}
+.jdot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.jdot.ok{background:var(--g)}
+.jdot.meh{background:var(--w)}
+.jdot.bad{background:var(--r)}
+.jt{font-size:11px;color:var(--fg3);margin-left:auto;flex-shrink:0}
+.jx{background:none;border:none;color:var(--fg3);cursor:pointer;font-size:14px;padding:0 4px;flex-shrink:0}
+.jem{text-align:center;padding:24px;color:var(--fg3);font-size:13px}
+.jexp{display:inline-flex;padding:6px 14px;border-radius:8px;border:1px solid var(--brd);background:var(--bg2);font-size:12px;cursor:pointer;font-family:inherit;color:var(--fg2);margin-top:8px}
+/* SCANNER */
+.scan-box{text-align:center;padding:10px}
+.scan-start{padding:14px 28px;border-radius:12px;border:none;background:var(--g);color:#fff;font-size:16px;font-weight:600;cursor:pointer;font-family:inherit;margin:10px 0}
+.scan-start:active{opacity:.8}
+.scan-stop{padding:10px 20px;border-radius:10px;border:none;background:var(--r);color:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;margin:10px 0}
+#scan-cam{width:100%;max-width:400px;margin:10px auto;border-radius:12px;overflow:hidden;position:relative;display:none}
+#scan-cam video,#scan-cam canvas{width:100%!important;height:auto!important}
+.scan-or{color:var(--fg3);font-size:13px;margin:14px 0 8px}
+.scan-manual-row{display:flex;gap:6px;max-width:400px;margin:0 auto}
+.scan-manual{flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--brd);background:var(--bg2);font-size:14px;color:var(--fg);font-family:inherit;outline:none}
+.scan-go{padding:10px 16px;border-radius:10px;border:none;background:var(--fg);color:var(--bg);font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+.scan-status{font-size:13px;color:var(--fg2);margin:10px 0;min-height:20px}
+.scan-result{margin:12px auto;max-width:400px;border-radius:12px;overflow:hidden;border:1px solid var(--brd);text-align:left;display:none}
+.scan-result-head{padding:12px 14px;font-weight:600;font-size:15px;color:#fff}
+.scan-result-head.verdict-green{background:var(--g)}
+.scan-result-head.verdict-red{background:var(--r)}
+.scan-result-head.verdict-orange{background:var(--w)}
+.scan-result-head.verdict-unknown{background:var(--fg3)}
+.scan-result-body{padding:12px 14px;font-size:13px;line-height:1.6}
+.scan-result-body .prod-name{font-weight:600;font-size:14px;margin-bottom:6px}
+.scan-result-body .prod-detail{color:var(--fg2)}
+.scan-result-body .prod-ingredients{margin-top:8px;padding:8px 10px;background:var(--bg2);border-radius:8px;font-size:12px;color:var(--fg2);max-height:120px;overflow-y:auto}
+.scan-result-body .prod-flags{margin-top:8px}
+.scan-result-body .flag{display:inline-block;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:600;margin:2px 4px 2px 0}
+.flag.fg{background:var(--gl);color:var(--g)}
+.flag.fr{background:var(--rl);color:var(--r)}
+.flag.fw{background:var(--wl);color:var(--w)}
+.scan-history{max-width:400px;margin:16px auto 0;text-align:left}
+.scan-history h4{font-size:13px;color:var(--fg3);margin-bottom:6px}
+.sh-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;margin-bottom:4px;font-size:13px;background:var(--bg2);border:1px solid var(--brd);cursor:pointer}
+.sh-item:active{opacity:.7}
+.sh-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.sh-dot.green{background:var(--g)}
+.sh-dot.red{background:var(--r)}
+.sh-dot.orange{background:var(--w)}
+.sh-time{font-size:11px;color:var(--fg3);margin-left:auto}
+.pbtn{position:fixed;bottom:16px;right:16px;width:48px;height:48px;border-radius:50%;background:var(--fg);color:var(--bg);border:none;font-size:20px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25);z-index:20;display:flex;align-items:center;justify-content:center}
+@media print{.nav,.sbar,.pbtn,.jr,.jf,.ja,.jx,.jexp,.scan-start,.scan-stop,.scan-manual-row,.scan-or,#scan-cam{display:none!important}.vw{display:block!important}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"></nav>
+<div class="sbar" id="sbar"><input class="sinp" type="text" id="sinp" placeholder="Chercher un aliment..." autocomplete="off"></div>
+<div class="vw on" id="v-aliments"></div>
+<div class="vw" id="v-recherche"><div id="sres"><div class="nr">Tape le nom d'un aliment pour savoir s'il est vert ou rouge.</div></div></div>
+<div class="vw" id="v-scanner">
+<div class="scan-box">
+<button class="scan-start" id="scanBtn">Ouvrir la camera</button>
+<button class="scan-stop" id="stopBtn" style="display:none">Arreter la camera</button>
+<div id="scan-cam"></div>
+<div class="scan-status" id="scanStatus"></div>
+<div class="scan-or">— ou tape le code-barres —</div>
+<div class="scan-manual-row">
+<input class="scan-manual" type="text" id="barcodeInput" placeholder="Code-barres (ex: 3017620422003)" inputmode="numeric">
+<button class="scan-go" id="barcodeGo">OK</button>
+</div>
+<div class="scan-result" id="scanResult"></div>
+<div class="scan-history" id="scanHistory"></div>
+</div>
+</div>
+<div class="vw" id="v-phases"></div>
+<div class="vw" id="v-memo"></div>
+<div class="vw" id="v-journal"></div>
+<button class="pbtn" onclick="window.print()">&#128424;</button>
+
+<script>
+var DB=[
+{cat:"Legumes",warn:"Irritation anale : pas de tomates crues acides, pas de poivrons crus.",g:[{n:"Carotte cuite",d:"Fibre douce, anti-inflammatoire"},{n:"Courgette cuite",d:"Tres digeste"},{n:"Epinards cuits",d:"Fer + doux"},{n:"Patate douce",d:"Fibre soluble, apaisante"},{n:"Pomme de terre sans peau",d:"Neutre"},{n:"Haricot vert",d:"Fibre douce"},{n:"Concombre sans peau",d:"Hydratant"},{n:"Laitue, mache, endive",d:"Legeres"},{n:"Courge, potiron",d:"Doux"},{n:"Poivron cuit",d:"Toujours cuit"},{n:"Tomate pelee epepinee cuite",d:"OK si bien preparee"}],r:[{n:"Ail",d:"FODMAP eleve + irritant anal"},{n:"Oignon",d:"FODMAP eleve"},{n:"Echalote",d:"Meme famille"},{n:"Poireau blanc",d:"FODMAP"},{n:"Chou-fleur",d:"Fermentation ++"},{n:"Brocoli",d:"Fermentation"},{n:"Chou blanc",d:"Fermentation ++"},{n:"Artichaut",d:"FODMAP"},{n:"Asperge",d:"FODMAP"},{n:"Champignons",d:"FODMAP"},{n:"Petits pois",d:"Fermentation"},{n:"Topinambour",d:"FODMAP tres eleve"},{n:"Crudites en exces",d:"Fibres dures"}]},
+{cat:"Fruits",warn:"Irritation anale : agrumes et kiwi peuvent irriter. Privilegier banane + compote.",g:[{n:"Banane bien mure",d:"Apaisant ++"},{n:"Myrtille / bleuet",d:"Antioxydant"},{n:"Fraise",d:"Low FODMAP"},{n:"Melon / cantaloup",d:"Hydratant"},{n:"Orange",d:"Sans exces"},{n:"Mandarine",d:"Sans exces"},{n:"Compote maison sans sucre",d:"Ideal phase 1-2"},{n:"Fruits cuits",d:"Mieux toleres"}],r:[{n:"Pomme crue",d:"FODMAP (fructose)"},{n:"Poire crue",d:"FODMAP"},{n:"Mangue",d:"FODMAP"},{n:"Pasteque",d:"FODMAP"},{n:"Cerise",d:"Sorbitol"},{n:"Peche",d:"FODMAP"},{n:"Nectarine",d:"FODMAP"},{n:"Abricot",d:"FODMAP"},{n:"Prune",d:"Sorbitol"},{n:"Fruits secs",d:"FODMAP concentres"},{n:"Jus concentres",d:"Fructose ++"},{n:"Agrumes en exces",d:"Acidite irritante"}]},
+{cat:"Proteines",warn:null,g:[{n:"Poulet",d:"Vapeur ou four"},{n:"Dinde",d:"Maigre"},{n:"Poisson blanc",d:"Cabillaud, sole"},{n:"Saumon, maquereau",d:"Omega-3"},{n:"Oeufs",d:"Excellente proteine"},{n:"Tofu ferme",d:"Low FODMAP"},{n:"Tempeh",d:"Portion moderee"}],r:[{n:"Viandes rouges grasses",d:"Inflammatoire"},{n:"Charcuterie",d:"Sel, additifs"},{n:"Viandes frites / panees",d:"Double irritant"},{n:"Plats tres epices",d:"Irritant colon + anal"},{n:"Viandes transformees",d:"Industrielles"}]},
+{cat:"Feculents et cereales",warn:"Phase de crise : riz blanc uniquement. Quinoa et avoine en phase 2+.",g:[{n:"Riz blanc / basmati",d:"Ultra apaisant"},{n:"Riz brun",d:"Phase stabilisation"},{n:"Quinoa",d:"Sans gluten"},{n:"Sarrasin",d:"Sans gluten"},{n:"Flocons d'avoine sans gluten",d:"Portion limitee"},{n:"Pain sans gluten",d:"Riz ou mais"},{n:"Galettes de riz",d:"Snack neutre"},{n:"Pomme de terre",d:"Base sure"}],r:[{n:"Ble (pain, pates, couscous)",d:"FODMAP + gluten"},{n:"Seigle",d:"FODMAP"},{n:"Orge",d:"FODMAP"},{n:"Cereales au ble",d:"Fibres agressives"},{n:"Pain blanc industriel",d:"Additifs"},{n:"Biscuits, viennoiseries",d:"Sucre + ble + gras"}]},
+{cat:"Produits laitiers",warn:null,g:[{n:"Lait sans lactose",d:"OK"},{n:"Lait d'amande",d:"Vegetal"},{n:"Lait de riz",d:"Neutre"},{n:"Lait de coco",d:"Vegetal"},{n:"Yaourt sans lactose",d:"Probiotiques"},{n:"Fromages durs affines",d:"Parmesan, comte"},{n:"Feta, brie",d:"Petites portions"},{n:"Kefir",d:"Si tolere, phase 3+"}],r:[{n:"Lait de vache normal",d:"Lactose"},{n:"Lait chevre / brebis",d:"Lactose"},{n:"Yaourt classique",d:"Lactose"},{n:"Creme glacee",d:"Lactose + sucre"},{n:"Ricotta",d:"FODMAP"},{n:"Fromage frais",d:"Lactose"},{n:"Fromage cottage",d:"Sauf petite portion"}]},
+{cat:"Graisses, noix et graines",warn:null,g:[{n:"Huile d'olive",d:"Anti-inflammatoire"},{n:"Huile de coco",d:"Digeste"},{n:"Beurre",d:"Petite quantite"},{n:"Avocat",d:"1/8 max"},{n:"Graines de chia trempees",d:"Fibre soluble"},{n:"Graines de lin moulues",d:"Fibre soluble"},{n:"Amandes",d:"Max 10"},{n:"Noix de Grenoble",d:"Omega-3"},{n:"Graines de citrouille",d:"Nutriments"}],r:[{n:"Huiles raffinees",d:"Inflammatoire"},{n:"Margarines",d:"Graisses trans"},{n:"Fritures",d:"Irritant colon + anal"},{n:"Noix de cajou",d:"FODMAP"},{n:"Pistaches",d:"FODMAP"},{n:"Exces de gras",d:"Surcharge"}]},
+{cat:"Boissons",warn:"Le cafe est l'ennemi n.1 de l'irritation anale. Max 1 leger, jamais a jeun.",g:[{n:"Eau plate",d:"Min 1,5L/jour"},{n:"Tisane camomille",d:"Apaisante ++"},{n:"Tisane fenouil",d:"Anti-ballonnement"},{n:"Tisane gingembre",d:"Anti-inflammatoire"},{n:"Tisane menthe poivree",d:"Antispasmodique"},{n:"Bouillon d'os maison",d:"Repare la muqueuse"}],r:[{n:"Cafe",d:"Stimule transit, irritant anal"},{n:"Alcool",d:"Deshydrate, irrite"},{n:"Sodas",d:"Gaz + sucre"},{n:"Boissons gazeuses",d:"Ballonnements"},{n:"Boissons sucrees",d:"Fructose"},{n:"Boissons energisantes",d:"Cafeine"},{n:"Jus de fruits acides",d:"Acidite"}]},
+{cat:"Sucres et assaisonnements",warn:"Irritation anale : zero piment/cayenne/harissa. Poivre noir modere OK.",g:[{n:"Sirop d'erable",d:"Moderation"},{n:"Chocolat noir 70%+",d:"Petit carre"},{n:"Stevia",d:"Edulcorant naturel"},{n:"Basilic",d:"Herbe douce"},{n:"Persil",d:"Herbe douce"},{n:"Coriandre",d:"Anti-inflammatoire"},{n:"Curcuma",d:"Anti-inflammatoire puissant"},{n:"Gingembre frais",d:"Anti-inflammatoire"}],r:[{n:"Miel en grande quantite",d:"FODMAP"},{n:"Sirop d'agave",d:"FODMAP"},{n:"Sorbitol, mannitol, xylitol",d:"Polyols"},{n:"Sucre blanc en exces",d:"Mauvaises bacteries"},{n:"Piment / cayenne",d:"Irritant anal ++"},{n:"Harissa",d:"Irritant anal ++"},{n:"Sauces industrielles",d:"Ail, oignon caches"},{n:"Plats prepares",d:"Ail/oignon caches"}]}
+];
+
+var PHASES=[
+{n:1,t:"Apaisement",d:"1-3 jours",c:"#2e7d32",desc:"Reduire l'irritation, calmer le colon.",ok:["Riz blanc / basmati","Carottes cuites","Courgettes cuites","Banane bien mure","Compote maison sans sucre","Bouillon maison","Tisane camomille ou fenouil","Eau plate 1,5L min"],no:["Tout produit laitier","Crudites","Legumineuses","Cafe","Epices","Fritures","Boissons gazeuses","Alcool"]},
+{n:2,t:"Reintroduction douce",d:"3-10 jours",c:"#ef6c00",desc:"Reintroduire fibres douces + proteines. Un aliment a la fois.",ok:["Patate douce","Poulet / poisson vapeur","Huile d'olive","Oeufs","Flocons d'avoine","Courges","Epinards cuits","Yaourt sans lactose (test)"],no:["Choux","Brocoli","Oignon / ail cru","Pain blanc industriel","Charcuterie","Alcool","Fritures"]},
+{n:3,t:"Stabilisation",d:"10-30 jours",c:"#1565c0",desc:"Stabiliser le transit, nourrir le microbiote.",ok:["Fruits cuits varies","Legumes vapeur varies","Lentilles corail rincees","Quinoa","Kefir si tolere","Graines de chia trempees","Sarrasin","Poissons gras"],no:["Haricots / pois chiches","Aliments ultra-transformes","Sauces industrielles","Sucre en exces","Cafe fort"]},
+{n:4,t:"Entretien",d:"Long terme",c:"#7b1fa2",desc:"Maintenir un colon sain. Alimentation diversifiee mais vigilante.",ok:["Legumes varies","Fruits frais (tolerance)","Fibres solubles (avoine, psyllium)","Poissons gras","Noix (portions FODMAP)","Herbes douces","Chocolat noir"],no:["Exces de gluten","Fritures regulieres","Sodas","Fast-food","Exces de cafe","Alcool regulier","Epices fortes"]}
+];
+
+/* MOTS-CLES ROUGES pour analyse ingredients */
+var RED_WORDS=["ail","oignon","echalote","poireau","lactose","lait entier","lait ecreme","creme","fromage","ble","gluten","farine de ble","seigle","orge","fructose","sirop de glucose-fructose","sirop d'agave","sorbitol","mannitol","xylitol","maltitol","inuline","chicor","artichaut","asperge","champignon","pois chiche","haricot rouge","haricot blanc","lentille","feve","mais","huile de tournesol","huile de palme","margarine","piment","cayenne","harissa","paprika fort","alcool","cafe","caramel"];
+var GREEN_WORDS=["riz","quinoa","sarrasin","avoine","huile d'olive","huile de coco","carotte","courgette","epinard","patate douce","pomme de terre","banane","fraise","myrtille","poulet","dinde","saumon","cabillaud","oeuf","tofu","curcuma","gingembre","basilic","persil"];
+
+var tabs=["Aliments","Recherche","Scanner","4 phases","Memo anal","Journal"];
+var ids=["aliments","recherche","scanner","phases","memo","journal"];
+var feel="ok",entries=[],scanHist=[];
+try{entries=JSON.parse(localStorage.getItem("cj6")||"[]")}catch(e){}
+try{scanHist=JSON.parse(localStorage.getItem("sh1")||"[]")}catch(e){}
+
+function init(){
+var nav=document.getElementById("nav");
+tabs.forEach(function(t,i){
+var b=document.createElement("button");
+b.className="nb"+(i===0?" on":"");
+b.textContent=t;
+b.addEventListener("click",function(){showTab(ids[i],b)});
+nav.appendChild(b);
+});
+document.getElementById("sinp").addEventListener("input",function(){doSearch(this.value)});
+document.getElementById("scanBtn").addEventListener("click",startScan);
+document.getElementById("stopBtn").addEventListener("click",stopScan);
+document.getElementById("barcodeGo").addEventListener("click",function(){lookupBarcode(document.getElementById("barcodeInput").value.trim())});
+document.getElementById("barcodeInput").addEventListener("keydown",function(e){if(e.key==="Enter")lookupBarcode(this.value.trim())});
+renderAliments();renderPhases();renderMemo();renderJournal();renderScanHistory();
+}
+
+function showTab(id,btn){
+document.querySelectorAll(".vw").forEach(function(v){v.classList.remove("on")});
+document.querySelectorAll(".nb").forEach(function(b){b.classList.remove("on")});
+document.getElementById("v-"+id).classList.add("on");
+btn.classList.add("on");
+document.getElementById("sbar").style.display=id==="recherche"?"block":"none";
+if(id==="recherche")document.getElementById("sinp").focus();
+if(id!=="scanner")stopScan();
+}
+
+function renderAliments(){
+var c=document.getElementById("v-aliments"),h="";
+DB.forEach(function(cat){
+h+='<div class="cd"><div class="cd-h" onclick="this.parentElement.classList.toggle(\'shut\')">'+cat.cat+' <span class="c">'+cat.g.length+" verts / "+cat.r.length+" rouges</span></div><div class=\"cd-b\"><div class=\"fr\"><div class=\"fc g\">"+cat.g.map(function(f){return "<b>"+f.n+"</b> <span class='s'>"+f.d+"</span>"}).join("<br>")+'</div><div class="fc r">'+cat.r.map(function(f){return "<b>"+f.n+"</b> <span class='s'>"+f.d+"</span>"}).join("<br>")+"</div></div>"+(cat.warn?'<div class="fw">'+cat.warn+"</div>":"")+"</div></div>";
+});
+c.innerHTML=h;
+}
+
+function getAllFoods(){
+var a=[];
+DB.forEach(function(cat){
+cat.g.forEach(function(f){a.push({name:f.n,detail:f.d,cat:cat.cat,type:"green"})});
+cat.r.forEach(function(f){a.push({name:f.n,detail:f.d,cat:cat.cat,type:"red"})});
+});
+return a;
+}
+var allF=getAllFoods();
+
+function doSearch(q){
+var out=document.getElementById("sres");
+if(!q.trim()){out.innerHTML='<div class="nr">Tape le nom d\'un aliment.</div>';return}
+var terms=q.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").split(/\s+/);
+var res=allF.filter(function(f){
+var h=(f.name+" "+f.detail+" "+f.cat).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+return terms.every(function(t){return h.indexOf(t)>-1});
+});
+if(!res.length){out.innerHTML='<div class="nr">Aucun resultat pour "'+q+'"</div>';return}
+out.innerHTML=res.map(function(f){
+var isG=f.type==="green";
+return '<div class="si '+(isG?"sg":"sr")+'"><span class="bd '+(isG?"bg":"br")+'">'+(isG?"VERT":"ROUGE")+"</span><div><div class=\"sn\">"+f.name+'</div><div class="sc">'+f.cat+'</div><div class="sd">'+f.detail+"</div></div></div>";
+}).join("");
+}
+
+function renderPhases(){
+var c=document.getElementById("v-phases"),h="";
+PHASES.forEach(function(p){
+h+='<div class="ph" onclick="this.classList.toggle(\'op\')"><div class="ph-h"><div class="ph-d" style="background:'+p.c+'">'+p.n+'</div><div><div class="ph-t">'+p.t+'</div><div class="ph-s">'+p.d+"</div></div></div>"+'<div class="ph-b"><p style="margin-bottom:8px">'+p.desc+"</p>"+'<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div><b style="color:var(--g);font-size:12px">OK :</b><ul class="pl">'+p.ok.map(function(x){return "<li>"+x+"</li>"}).join("")+'</ul></div><div><b style="color:var(--r);font-size:12px">EVITER :</b><ul class="pl">'+p.no.map(function(x){return '<li class="av">'+x+"</li>"}).join("")+"</ul></div></div></div></div>";
+});
+c.innerHTML=h;
+}
+
+function renderMemo(){
+document.getElementById("v-memo").innerHTML='<div class="mc mr"><h3>Les 5 pires ennemis</h3><div class="mi"><b>Cafe</b> — stimule le transit, irritant direct</div><div class="mi"><b>Piment / cayenne / harissa</b> — brulure garantie</div><div class="mi"><b>Fritures</b> — graisses irritantes</div><div class="mi"><b>Alcool</b> — deshydrate et irrite</div><div class="mi"><b>Agrumes en exces</b> — acidite irritante</div></div><div class="mc mg"><h3>Les 5 meilleurs allies</h3><div class="mi"><b>Riz blanc</b> — ultra apaisant</div><div class="mi"><b>Banane bien mure</b> — fibre douce</div><div class="mi"><b>Carotte cuite</b> — anti-inflammatoire</div><div class="mi"><b>Tisane camomille</b> — apaise colon + muqueuse</div><div class="mi"><b>Huile d\'olive</b> — lubrifie, anti-inflammatoire</div></div><div class="mc mt"><h3>Regles d\'or</h3><div class="mi">Cuissons douces : vapeur, mijote, four doux</div><div class="mi">Hydratation : min 1,5L eau + tisanes/jour</div><div class="mi">Zero epice forte — poivre noir modere OK</div><div class="mi">Manger lentement, bien macher</div><div class="mi">Toilettes : ne pas forcer, lingettes eau tiede</div><div class="mi">Stress = ennemi du colon</div></div>';
+}
+
+/* JOURNAL */
+function setFeel(f,btn){
+feel=f;
+document.querySelectorAll(".jf button").forEach(function(b){b.classList.remove("on")});
+btn.classList.add("on");
+}
+function addEntry(){
+var inp=document.getElementById("jFood");
+var v=inp.value.trim();if(!v)return;
+var now=new Date();
+entries.push({food:v,feel:feel,time:now.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"}),date:now.toLocaleDateString("fr-FR")});
+try{localStorage.setItem("cj6",JSON.stringify(entries))}catch(e){}
+inp.value="";renderJournal();
+}
+function delEntry(i){
+entries.splice(i,1);
+try{localStorage.setItem("cj6",JSON.stringify(entries))}catch(e){}
+renderJournal();
+}
+function renderJournal(){
+var today=new Date().toLocaleDateString("fr-FR");
+var te=entries.filter(function(e){return e.date===today});
+var c=document.getElementById("v-journal");
+c.innerHTML='<div class="jd">'+today+'</div><div class="jr"><input class="ji" type="text" id="jFood" placeholder="Aliment mange..."><button class="ja" id="jaBtn">Ajouter</button></div><div class="jf"><button class="'+(feel==="ok"?"on":"")+'" data-f="ok">Bien tolere</button><button class="'+(feel==="meh"?"on":"")+'" data-f="meh">Moyen</button><button class="'+(feel==="bad"?"on":"")+'" data-f="bad">Mal tolere</button></div><div id="jlist">'+(te.length?te.map(function(e){var gi=entries.indexOf(e);return '<div class="je"><span class="jdot '+e.feel+'"></span><span>'+e.food+'</span><span class="jt">'+e.time+'</span><button class="jx" data-i="'+gi+'">x</button></div>'}).join(""):'<div class="jem">Aucune entree aujourd\'hui.</div>')+'</div><button class="jexp" id="jexpBtn">Exporter le journal</button>';
+document.getElementById("jaBtn").addEventListener("click",addEntry);
+document.getElementById("jFood").addEventListener("keydown",function(e){if(e.key==="Enter")addEntry()});
+document.querySelectorAll(".jf button").forEach(function(b){b.addEventListener("click",function(){setFeel(b.dataset.f,b)})});
+document.querySelectorAll(".jx").forEach(function(b){b.addEventListener("click",function(){delEntry(parseInt(b.dataset.i))})});
+document.getElementById("jexpBtn").addEventListener("click",exportJ);
+}
+function exportJ(){
+if(!entries.length){alert("Aucune entree.");return}
+var t="JOURNAL ALIMENTAIRE\n====================\n\n";
+var dates=[];entries.forEach(function(e){if(dates.indexOf(e.date)===-1)dates.push(e.date)});
+dates.forEach(function(d){t+=d+"\n";entries.filter(function(e){return e.date===d}).forEach(function(e){t+="  "+e.time+" | "+e.food+" | "+(e.feel==="ok"?"Bien tolere":e.feel==="meh"?"Moyen":"Mal tolere")+"\n"});t+="\n"});
+var blob=new Blob([t],{type:"text/plain"});
+var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="journal_alimentaire.txt";a.click();
+}
+
+/* SCANNER */
+var scanning=false;
+function startScan(){
+var cam=document.getElementById("scan-cam");
+var st=document.getElementById("scanStatus");
+cam.style.display="block";
+st.textContent="Demarrage de la camera...";
+document.getElementById("scanBtn").style.display="none";
+document.getElementById("stopBtn").style.display="inline-block";
+Quagga.init({
+inputStream:{name:"Live",type:"LiveStream",target:cam,constraints:{facingMode:"environment",width:{ideal:640},height:{ideal:480}}},
+decoder:{readers:["ean_reader","ean_8_reader","upc_reader","upc_e_reader"]},
+locate:true
+},function(err){
+if(err){st.textContent="Erreur camera : "+err.message;stopScan();return}
+Quagga.start();
+scanning=true;
+st.textContent="Pointe la camera vers un code-barres...";
+});
+Quagga.onDetected(function(result){
+if(!scanning)return;
+var code=result.codeResult.code;
+if(code&&code.length>=8){
+scanning=false;
+Quagga.stop();
+st.textContent="Code detecte : "+code;
+lookupBarcode(code);
+}
+});
+}
+
+function stopScan(){
+if(scanning){scanning=false;try{Quagga.stop()}catch(e){}}
+document.getElementById("scan-cam").style.display="none";
+document.getElementById("scanBtn").style.display="inline-block";
+document.getElementById("stopBtn").style.display="none";
+}
+
+function lookupBarcode(code){
+if(!code||code.length<8){document.getElementById("scanStatus").textContent="Code-barres invalide.";return}
+var st=document.getElementById("scanStatus");
+st.textContent="Recherche du produit...";
+stopScan();
+fetch("https://world.openfoodfacts.org/api/v2/product/"+code+".json")
+.then(function(r){return r.json()})
+.then(function(data){
+if(!data||data.status===0){
+showScanResult(null,code);
+st.textContent="";
+return;
+}
+var p=data.product;
+showScanResult(p,code);
+st.textContent="";
+})
+.catch(function(err){
+st.textContent="Erreur reseau. Verifie ta connexion internet.";
+});
+}
+
+function analyzeProduct(product){
+var name=(product.product_name_fr||product.product_name||"").toLowerCase();
+var ingredients=(product.ingredients_text_fr||product.ingredients_text||"").toLowerCase();
+var all=name+" "+ingredients;
+all=all.normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+var foundRed=[],foundGreen=[];
+RED_WORDS.forEach(function(w){
+var wn=w.normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+if(all.indexOf(wn)>-1)foundRed.push(w);
+});
+GREEN_WORDS.forEach(function(w){
+var wn=w.normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+if(all.indexOf(wn)>-1)foundGreen.push(w);
+});
+var verdict="green";
+var comment="Pas d'ingredient problematique detecte. Semble OK pour ton colon.";
+if(foundRed.length>3){
+verdict="red";
+comment="Plusieurs ingredients irritants detectes. A eviter.";
+}else if(foundRed.length>0){
+verdict="orange";
+comment="Contient des ingredients a risque. A consommer avec prudence ou a eviter en phase de crise.";
+}
+if(foundRed.length===0&&foundGreen.length>0){
+comment="Contient des ingredients favorables. Bon choix !";
+}
+return{verdict:verdict,comment:comment,red:foundRed,green:foundGreen};
+}
+
+function showScanResult(product,code){
+var res=document.getElementById("scanResult");
+res.style.display="block";
+if(!product){
+res.innerHTML='<div class="scan-result-head verdict-unknown">Produit non trouve</div><div class="scan-result-body"><div class="prod-name">Code : '+code+'</div><div class="prod-detail">Ce produit n\'est pas dans la base Open Food Facts. Tu peux verifier manuellement dans l\'onglet Recherche.</div></div>';
+return;
+}
+var analysis=analyzeProduct(product);
+var pname=product.product_name_fr||product.product_name||"Produit inconnu";
+var brand=product.brands||"";
+var ingr=product.ingredients_text_fr||product.ingredients_text||"Non disponible";
+var verdictLabel=analysis.verdict==="green"?"VERT — OK":analysis.verdict==="red"?"ROUGE — A EVITER":"ORANGE — PRUDENCE";
+var h='<div class="scan-result-head verdict-'+analysis.verdict+'">'+verdictLabel+"</div>";
+h+='<div class="scan-result-body">';
+h+='<div class="prod-name">'+pname+(brand?" — "+brand:"")+"</div>";
+h+='<div class="prod-detail">'+analysis.comment+"</div>";
+if(analysis.red.length){
+h+='<div class="prod-flags">';
+analysis.red.forEach(function(w){h+='<span class="flag fr">'+w+"</span>"});
+h+="</div>";
+}
+if(analysis.green.length){
+h+='<div class="prod-flags">';
+analysis.green.forEach(function(w){h+='<span class="flag fg">'+w+"</span>"});
+h+="</div>";
+}
+h+='<div class="prod-ingredients"><b>Ingredients :</b> '+ingr+"</div>";
+h+="</div>";
+res.innerHTML=h;
+/* Save to history */
+scanHist.unshift({name:pname,code:code,verdict:analysis.verdict,time:new Date().toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"}),date:new Date().toLocaleDateString("fr-FR")});
+if(scanHist.length>20)scanHist=scanHist.slice(0,20);
+try{localStorage.setItem("sh1",JSON.stringify(scanHist))}catch(e){}
+renderScanHistory();
+}
+
+function renderScanHistory(){
+var c=document.getElementById("scanHistory");
+if(!scanHist.length){c.innerHTML="";return}
+c.innerHTML="<h4>Historique des scans</h4>"+scanHist.map(function(s){
+return '<div class="sh-item" onclick="lookupBarcode(\''+s.code+'\')"><span class="sh-dot '+s.verdict+'"></span><span>'+s.name+'</span><span class="sh-time">'+s.time+"</span></div>";
+}).join("");
+}
+
+init();
+</script>
+</body>
+</html>
